@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vibequery</title>
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin" />
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New'],
+            },
+            colors: {
+              'db-dark': '#0f1216',
+              'db-dark-2': '#111827',
+              'db-dark-3': '#1f2937',
+              'db-light': '#e5e7eb',
+              'db-accent': '#3b82f6',
+              'db-accent-hover': '#2563eb',
+            },
+            boxShadow: {
+              card: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+              cardLg: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)',
+            },
+            borderRadius: {
+              md: '8px',
+              lg: '12px',
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f3f4f6;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #9ca3af;
+        border-radius: 6px;
+        border: 2px solid #f3f4f6;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
+      }
+      html.dark ::-webkit-scrollbar-track {
+        background: #111827;
+      }
+      html.dark ::-webkit-scrollbar-thumb {
+        background: #4b5563;
+        border-color: #111827;
+      }
+      html.dark ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
+      }
+    </style>
+    <!-- PrismJS Theme for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+    <style>
+      /* Fix for react-simple-code-editor and prism theme alignment */
+      .prism-editor-wrapper pre {
+        background-color: transparent !important;
+        margin: 0;
+      }
+      .prism-editor-wrapper textarea, .prism-editor-wrapper pre {
+        white-space: pre-wrap !important;
+        word-wrap: break-word !important;
+      }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 text-gray-800 antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/app/index.tsx"></script>
+  </body>
+</html>
